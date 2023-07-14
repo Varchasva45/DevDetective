@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevDetective</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 
                 <!--Search Bar-->   
                 <div class="search-bar">
-                    <i></i>
+                    <img src="./images/search-icon.svg" alt="" style="padding-left: 20px">
                     <input type="search" name="user-input" id="input" placeholder="Enter a GitHub username..." data-searchInput>
                     <button class="btn-search" type="submit" id="submit" data-searchInput>Search</button>
                 </div>
@@ -43,22 +43,17 @@
 
                     <div class="Info-Container">
 
-                        <div class="profile-bio">
-                            
-                            <div class="profile-info-wrapper">
-                                <img id="avatar" width="100px" height="100px">
-
-                                <div class="profile-name">
-                                    <h2 id="name"></h2>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" id="user"></a>
-                                </div>
-                                <p id="date"></p>
+                        <div class="profile-info-wrapper">
+                            <img id="avatar">
+                            <div class="profile-name">
+                                <h2 id="name"></h2>
+                                <a href="#" target="_blank" rel="noopener noreferrer" id="user"></a>
                             </div>
+                            <p id="date"></p>
                         </div>
 
-                        <div class="bio-p">
-                            <p id="bio"></p>
-                        </div>
+                        <p id="bio"></p>
+                    
 
 
                         <div class="profile-stats-wrapper">
@@ -80,29 +75,40 @@
 
                         </div>
 
-                        <div class="profile-links-wrapper">
+                        <!-- <div class="profile-links-wrapper">
 
                             <div class="profile-links">
+                                <div class="bottom-icons">
                                 <img src="./images/location-icon.svg">
+                                </div>
                                 <p class="profile-links" id="location"></p>
                             </div>
 
                             <div class="profile-links">
-                                <img src="./images/website-icon.svg">
+                                <div class="bottom-icons">
+                                    <img src="./images/website-icon.svg">
+                                </div>
+                                
                                 <a id="website">LinkedIn</a>
                             </div>
 
                             <div class="profile-links">
-                                <img src="./images/twitter-icon.svg">
+                                <div class="bottom-icons">
+                                    <img src="./images/twitter-icon.svg">
+                                </div>
+                                
                                 <a id="twitter"></a>
                             </div>
 
                             <div class="profile-links">
-                                <img src="./images/company-icon.svg">
+                                <div class="bottom-icons">
+                                    <img src="./images/company-icon.svg">
+                                </div>
+                               
                                 <p class="profile-links" id="company"></p>
                             </div>
 
-                        </div>
+                        </div> -->
 
                     </div>
 

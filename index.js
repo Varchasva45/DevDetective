@@ -14,9 +14,13 @@ const city = document.getElementById("location");
 const website = document.getElementById("website");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
+const root = document.documentElement.style;
+const modetext = document.getElementById("mode-text");
+const modeicon = document.getElementById("mode-icon");
 
 let darkMode = false;
 
+getUserData(url + "varchasva45");
 
 // fetches user info when submit is clicked
 btnsubmit.addEventListener("click", () => {
@@ -75,27 +79,42 @@ function updateProfile(data) {
 }
 
 btnMode.addEventListener("click", () => {
-    if(darkMode == false){
+    console.log("clicked");
+    if(!darkMode){
         darkModeProperties();
     }else{
         lightModeProperties();
     }
-})
+});
 
 
 function darkModeProperties() {
-
+    root.setProperty("--lm-bg", "#141D2F");
+    root.setProperty("--lm-bg-content", "#1E2A47");
+    root.setProperty("--lm-text", "white");
+    root.setProperty("--lm-text-alt", "white");
+    root.setProperty("--lm-shadow-xl", "rgba(70,88,109,0.15)");
+    modetext.innerText = "LIGHT";
+    modeicon.src = "./images/sun-icon.svg";
+    root.setProperty("--lm-icon-bg", "brightness(1000%)");
+    darkMode = true;
+    console.log("darkmode changed to " + darkMode);
 }
 
 function lightModeProperties() {
-
+    root.setProperty("--lm-bg", "#F6F8FF");
+    root.setProperty("--lm-bg-content", "#FEFEFE");
+    root.setProperty("--lm-text", "#4B6A9B");
+    root.setProperty("--lm-text-alt", "#2B3442");
+    root.setProperty("--lm-shadow-xl", "rgba(70, 88, 109, 0.25)");
+    modetext.innerText = "DARK";
+    modeicon.src = "./images/moon-icon.svg";
+    root.setProperty("--lm-icon-bg", "brightness(100%)");
+    darkMode = false;
+    console.log("darkmode changed to " + darkMode);
 }
 
 
 // initialise UI 
-
-function init() {
-
-}
 
 
