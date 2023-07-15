@@ -208,7 +208,6 @@ body {
 .profile-links {
     width: 50%;
     display: flex;
-    gap: 14px;
     justify-content: center;
     align-items: center;
 }

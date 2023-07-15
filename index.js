@@ -63,16 +63,35 @@ function updateProfile(data) {
         userName.innerText = data?.name;
         user.innerText = `@${data?.login}`;
         user.href = data?.html_url;
-        bio.innerText = `${data?.bio}`;
+        if(data?.bio != null){
+            bio.innerText = `${data?.bio}`;
+        }else{
+            bio.innerText = "";
+        }
         repos.innerText = data?.public_repos;
         followers.innerText = data?.followers;
         following.innerText = data?.following;
-        location.innerText = `${data?.location}`;
-        city.innerText = data?.location;
-        website.href = data?.blog;
-        twitter.href = "https://twitter.com/ " + data?.twitter_username;
-        twitter.innerText = data?.twitter_username;
-        company.innerText = data?.company;
+        const val = data?.location;
+        if(val != null){
+            city.innerText = data?.location;
+        }else{
+            city.innerText = "Not Present";
+        }
+
+        const val1 = data?.blog;
+        if(val1 != null){
+            website.href = data?.blog;
+        }else{
+            website.href = data?.blog;
+        }
+
+        const val3 = data?.company;
+        if(val3 != null){
+            company.innerText = data?.company;
+        }else{
+            company.innerText = "Not Present";
+        }
+        
     }else{
 
     }
